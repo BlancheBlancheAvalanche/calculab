@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+	  <style>
+	  #calculator {
+		width: 300px;
+		margin: 50px auto;
+		font-family: Arial, sans-serif;
+	  }
+	  #display {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 15px;
+		font-size: 1.5rem;
+		text-align: right;
+		margin-bottom: 10px;
+	  }
+	  #buttons {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 5px;
+	  }
+	  #buttons button {
+		padding: 20px;
+		font-size: 1.2rem;
+		cursor: pointer;
+	  }
+	</style>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+    <div id="buttons">
+      <!-- Кнопки цифр -->
+      <button data-action="digit" data-value="7">7</button>
+      <button data-action="digit" data-value="8">8</button>
+      <button data-action="digit" data-value="9">9</button>
+      <button data-action="operator" data-value="/">/</button>
+      <button data-action="digit" data-value="4">4</button>
+      <button data-action="digit" data-value="5">5</button>
+      <button data-action="digit" data-value="6">6</button>
+      <button data-action="operator" data-value="*">*</button>
+      <button data-action="digit" data-value="1">1</button>
+      <button data-action="digit" data-value="2">2</button>
+      <button data-action="digit" data-value="3">3</button>
+      <button data-action="operator" data-value="-">-</button>
+      <button data-action="digit" data-value="0">0</button>
+      <button data-action="digit" data-value=".">.</button>
+      <button data-action="calculate">=</button>
+      <button data-action="operator" data-value="+">+</button>
+      <button data-action="clear" style="grid-column: span 4;">C</button>
+    </div>
+  </div>
+  <script src="dist/calculator.js"></script>
+</body>
+</html>
